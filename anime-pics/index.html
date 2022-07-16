@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* *::-webkit-scrollbar {
+        display: none;
+      } */
+
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .image {
+        background-color: white;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100vw;
+
+        image-rendering: -webkit-optimize-contrast;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        color: white;
+        background-color: rgb(60, 60, 60);
+        border: 0;
+        border-radius: 4px;
+
+        height: 2rem;
+        margin-right: 0.25vw;
+        margin-left: 0.25vw;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      button:hover {
+        background-color: rgb(90, 90, 90);
+      }
+
+      body {
+        background-color: rgb(30, 30, 30);
+      }
+
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        display: block;
+
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .lds-ellipsis div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <script language="javascript" type="module" src="main.js"></script>
+    <title>anime pics</title>
+  </head>
+  <body>
+    <button type="button" id="0">Subreddits</button><button type="button" id="1">Moebooru</button>
+    <div id="result"></div>
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

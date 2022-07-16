@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .loader,
+      .loader:before,
+      .loader:after {
+        background: #ffffff;
+        -webkit-animation: load1 1s infinite ease-in-out;
+        animation: load1 1s infinite ease-in-out;
+        width: 1em;
+        height: 4em;
+      }
+      .loader {
+        color: #ffffff;
+        text-indent: -9999em;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 11px;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      .loader:before,
+      .loader:after {
+        position: absolute;
+        top: 0;
+        content: "";
+      }
+      .loader:before {
+        left: -1.5em;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .loader:after {
+        left: 1.5em;
+      }
+      @-webkit-keyframes load1 {
+        0%,
+        80%,
+        100% {
+          box-shadow: 0 0;
+          height: 4em;
+        }
+        40% {
+          box-shadow: 0 -2em;
+          height: 5em;
+        }
+      }
+      @keyframes load1 {
+        0%,
+        80%,
+        100% {
+          box-shadow: 0 0;
+          height: 4em;
+        }
+        40% {
+          box-shadow: 0 -2em;
+          height: 5em;
+        }
+      }
+
+      body {
+        background-color: rgb(30, 30, 30);
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .animeContainer {
+        margin: 2rem 10vw 2rem 10vw;
+      }
+
+      .main_picture {
+        width: 10vw;
+        display: inline;
+      }
+
+      .rightContainer {
+        width: 60vw;
+
+        margin: 1rem;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .title {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .episode {
+        display: inline-block;
+
+        padding: 0.6rem;
+        margin: 0.3rem;
+        background-color: #333333;
+        text-decoration: none;
+      }
+
+      .watched {
+        background-color: green;
+      }
+
+      .inputContainer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .input {
+        border: none;
+        border-radius: 2px;
+
+        width: 20rem;
+        height: 2rem;
+        padding: 0.25rem 1rem 0.25rem 1rem;
+
+        display: inline-block;
+
+        background-color: #333333;
+        outline: none;
+      }
+
+      .done {
+        background-color: green;
+        border: none;
+        border-radius: 2px;
+
+        padding: 0.75rem;
+        margin-left: 0.5rem;
+
+        display: inline-block;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <script language="javascript" type="module" src="main.js"></script>
+    <title>anime tracker</title>
+  </head>
+  <body>
+    <div class="loader">Loading...</div>
+  </body>
+</html>
